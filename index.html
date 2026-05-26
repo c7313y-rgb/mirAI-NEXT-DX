@@ -1,0 +1,1399 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>副担任 mirAI NEXT｜授業を、もっと自由に。学びを、もっと自分らしく。</title>
+<meta name="description" content="教員には授業準備〜効果測定までを一気通貫で。生徒にはカリキュラム・副担任AI対話・キャリアシミュレーターを。教員と生徒、それぞれの「副担任」がここにいます。">
+<meta property="og:title" content="副担任 mirAI NEXT｜教育実装OS">
+<meta property="og:description" content="授業設計から成果報告まで、教員の業務を強力に伴走。生徒一人ひとりに、AIの副担任を。">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;800;900&family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LANDING VIEW
+============================================================ -->
+<div id="view-landing" class="view">
+
+<header class="site-header">
+  <div class="nav-container">
+    <a href="#" class="logo" onclick="showView('landing'); return false;">
+      <span class="logo-mark">mAI</span>
+      <span>
+        副担任 mirAI NEXT
+        <div class="logo-sub">教育実装OS</div>
+      </span>
+    </a>
+    <nav class="nav-links">
+      <a href="#features">特長</a>
+      <a href="#for-teacher">教員向け</a>
+      <a href="#for-student">生徒向け</a>
+      <button class="btn btn-secondary btn-sm" onclick="showView('login-teacher')">教員ログイン</button>
+      <button class="btn btn-teal btn-sm" onclick="showView('login-student')">生徒ログイン</button>
+    </nav>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="hero-container">
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        教員と生徒、それぞれの副担任
+      </div>
+      <h1>
+        授業を、<span class="underline">もっと自由に。</span><br>
+        学びを、<span class="accent">もっと自分らしく。</span>
+      </h1>
+      <p class="hero-lead">
+        副担任 mirAI NEXT は、教員の授業準備から効果測定までを一気通貫で支援し、
+        生徒一人ひとりにAIの副担任と未来をひらくキャリア体験を届ける、教育実装OSです。
+      </p>
+
+      <div class="role-cards">
+        <button class="role-card teacher" onclick="showView('login-teacher')">
+          <div class="role-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <div>
+            <div class="role-card-title">教員の方はこちら</div>
+            <div class="role-card-text">授業準備・実施・効果測定までを支援</div>
+          </div>
+        </button>
+        <button class="role-card student" onclick="showView('login-student')">
+          <div class="role-card-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M6 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+          </div>
+          <div>
+            <div class="role-card-title">生徒の方はこちら</div>
+            <div class="role-card-text">カリキュラム・AI対話・キャリア体験</div>
+          </div>
+        </button>
+      </div>
+    </div>
+
+    <div class="hero-visual">
+      <div class="hero-img-frame">
+        <img src="assets/img/hero.jpg" alt="教員と生徒が学ぶ様子">
+      </div>
+      <div class="hero-floating-card card-1">
+        <div class="floating-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <div>
+          <div class="floating-text-main">授業案を自動生成</div>
+          <div class="floating-text-sub">入力 → 5分で下書き完成</div>
+        </div>
+      </div>
+      <div class="hero-floating-card card-2">
+        <div class="floating-icon icon-teal">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <div>
+          <div class="floating-text-main">いつでも相談できる</div>
+          <div class="floating-text-sub">副担任mirAIが寄り添う</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Features -->
+<section class="section" id="features">
+  <div class="section-container">
+    <div class="section-head">
+      <div class="section-tag">FEATURES</div>
+      <h2 class="section-title">教員と生徒、<span class="underline">それぞれに寄り添う設計</span></h2>
+      <p class="section-lead">
+        教員の働き方も、生徒の学び方も。それぞれの場面に応じた機能を、ひとつのプラットフォームに。
+      </p>
+    </div>
+
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>
+          </div>
+          <div>
+            <div class="feature-title">授業自動生成</div>
+            <div class="feature-subtitle">For Teachers</div>
+          </div>
+        </div>
+        <p class="feature-text">
+          学習目標・対象・時間を入力するだけで、授業案・教材・ルーブリックを自動下書き。
+          編集→承認→スライド化→PDFダウンロードまで一気通貫。
+        </p>
+        <ul class="feature-list">
+          <li>テーマプリセット＋自由入力</li>
+          <li>3コンテンツ同時生成（授業案・教材・ルーブリック）</li>
+          <li>スライド化＆PDF出力で授業に即活用</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon icon-gold">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          </div>
+          <div>
+            <div class="feature-title">実施ログ＆効果測定</div>
+            <div class="feature-subtitle">For Teachers</div>
+          </div>
+        </div>
+        <p class="feature-text">
+          授業当日の進行をチェックリストで記録、終了後は参加率や到達度を入力。
+          ダッシュボードで学級の状況を可視化し、次回への改善提案も自動生成。
+        </p>
+        <ul class="feature-list">
+          <li>授業実施チェックリスト</li>
+          <li>参加率・ルーブリック到達度の推移グラフ</li>
+          <li>次回改善ポイントを自動提案</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon icon-purple">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          </div>
+          <div>
+            <div class="feature-title">副担任mirAI 対話</div>
+            <div class="feature-subtitle">For Teachers &amp; Students</div>
+          </div>
+        </div>
+        <p class="feature-text">
+          教員には授業設計・評価のサポーターとして。生徒には進路・学習・悩みごとに寄り添う相談相手として。
+          会話ログは教員側で確認でき、生徒の気づきや変化を見逃しません。
+        </p>
+        <ul class="feature-list">
+          <li>教員モード：授業設計・評価支援</li>
+          <li>生徒モード：学習・進路相談</li>
+          <li>OpenAI API接続でより自然な対話に</li>
+        </ul>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-header">
+          <div class="feature-icon icon-teal">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
+          </div>
+          <div>
+            <div class="feature-title">キャリアシミュレーター</div>
+            <div class="feature-subtitle">For Students</div>
+          </div>
+        </div>
+        <p class="feature-text">
+          生徒が興味・関心・得意分野を選ぶと、相性の高い進路候補と必要なスキル、
+          高校時代の準備ステップをAIが提案。志望理由書の素材にもなります。
+        </p>
+        <ul class="feature-list">
+          <li>興味の選択から進路マッチング</li>
+          <li>進路ごとの必要スキルと学びマップ</li>
+          <li>志望理由書の素材として活用可能</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- For teachers -->
+<section class="section section-soft" id="for-teacher">
+  <div class="section-container">
+    <div class="features-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+      <div>
+        <div class="section-tag" style="background: var(--primary-soft); color: var(--primary-2);">FOR TEACHERS</div>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.8vw, 32px); margin-top: 8px;">
+          授業準備〜成果報告まで、<br><span class="underline">この一画面で完結</span>
+        </h2>
+        <p class="section-lead" style="margin-top: 16px; margin-left: 0;">
+          「準備に時間がかかる」「評価の言語化が難しい」「成果報告が大変」——
+          そんな現場の声に応えて、教員ダッシュボードに必要な機能を集約しました。
+        </p>
+        <ul class="feature-list" style="margin-top: 20px;">
+          <li>授業準備ウィザード（入力→生成→レビュー→スライド化）</li>
+          <li>実施ログ：チェックリスト＆観点別評価入力</li>
+          <li>効果測定ダッシュボード：参加率・到達度・改善提案</li>
+          <li>生徒の副担任mirAI対話ログ閲覧（相談の傾向把握）</li>
+          <li>クラス進捗管理：単元・課題ごとに学級全体を俯瞰</li>
+        </ul>
+        <div style="margin-top: 28px;">
+          <button class="btn btn-primary" onclick="showView('login-teacher')">教員ログインへ →</button>
+        </div>
+      </div>
+      <div>
+        <img src="assets/img/teacher_prep.jpg" alt="教員の授業準備" style="border-radius: 24px; box-shadow: var(--shadow-xl);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- For students -->
+<section class="section" id="for-student">
+  <div class="section-container">
+    <div class="features-grid" style="grid-template-columns: 1fr 1fr; align-items: center;">
+      <div style="order: 2;">
+        <div class="section-tag" style="background: var(--teal-soft); color: var(--teal);">FOR STUDENTS</div>
+        <h2 class="section-title" style="font-size: clamp(22px, 2.8vw, 32px); margin-top: 8px; color: var(--teal);">
+          毎日が、<br><span style="background: linear-gradient(transparent 65%, var(--gold-soft) 65%);">小さなワクワク</span>に変わる
+        </h2>
+        <p class="section-lead" style="margin-top: 16px; margin-left: 0;">
+          授業のカリキュラムをいつでも確認でき、わからないことはAIの副担任に相談できる。
+          将来やってみたいことが、キャリアシミュレーターで見えてくる。
+          学びを「自分ごと」に変える3つの体験。
+        </p>
+        <ul class="feature-list" style="margin-top: 20px;">
+          <li>カリキュラム閲覧：単元目標・進捗・教材を一覧</li>
+          <li>副担任mirAI対話：勉強・進路・悩みごとに気軽に相談</li>
+          <li>キャリアシミュレーター：興味から進路候補をマッチング</li>
+          <li>自分の振り返りログをそのまま志望理由書素材に</li>
+        </ul>
+        <div style="margin-top: 28px;">
+          <button class="btn btn-teal" onclick="showView('login-student')">生徒ログインへ →</button>
+        </div>
+      </div>
+      <div style="order: 1;">
+        <img src="assets/img/student_hero.jpg" alt="ワクワクする生徒" style="border-radius: 24px; box-shadow: var(--shadow-xl);">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section cta-section">
+  <div class="section-container">
+    <h2>あなたの「やってみたい」を、<br><span class="accent">いま、はじめてみませんか？</span></h2>
+    <p>デモアカウントで全機能をすぐに体験できます。サーバー設定もダウンロードも必要ありません。</p>
+    <div class="cta-buttons">
+      <button class="btn btn-lg" style="background:#fff; color:var(--primary);" onclick="showView('login-teacher')">
+        👨‍🏫 教員として体験
+      </button>
+      <button class="btn btn-lg" style="background:rgba(255,255,255,.15); color:#fff; border:1.5px solid rgba(255,255,255,.5);" onclick="showView('login-student')">
+        🎓 生徒として体験
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-mark">mAI</span>
+          <span>副担任 mirAI NEXT</span>
+        </div>
+        <p>教員と生徒、それぞれに寄り添う教育実装OS。授業準備から学びの成果まで、AIが伴走します。</p>
+      </div>
+      <div class="footer-col">
+        <h5>サービス</h5>
+        <ul>
+          <li><a href="#features">機能一覧</a></li>
+          <li><a href="#for-teacher">教員向け</a></li>
+          <li><a href="#for-student">生徒向け</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>ログイン</h5>
+        <ul>
+          <li><a href="#" onclick="showView('login-teacher'); return false;">教員ログイン</a></li>
+          <li><a href="#" onclick="showView('login-student'); return false;">生徒ログイン</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>提供</h5>
+        <ul>
+          <li>株式会社NOLTYプランナーズ</li>
+          <li>サービス企画協力：Edutex</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 副担任 mirAI NEXT</div>
+      <div>教員と生徒、それぞれの副担任が、ここにいます。</div>
+    </div>
+  </div>
+</footer>
+
+</div><!-- /view-landing -->
+
+
+<!-- ============================================================
+     TEACHER LOGIN VIEW
+============================================================ -->
+<div id="view-login-teacher" class="view hidden">
+  <div class="login-page">
+    <div class="login-visual">
+      <div class="login-visual-image" style="background-image: url('assets/img/teacher_dashboard.jpg');"></div>
+      <div>
+        <a href="#" class="logo" onclick="showView('landing'); return false;">
+          <span class="logo-mark">mAI</span>
+          <span>副担任 mirAI NEXT</span>
+        </a>
+      </div>
+      <div>
+        <h1 class="login-headline">
+          授業の準備時間を、<br><span class="accent">生徒との時間に。</span>
+        </h1>
+        <ul class="login-features">
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            授業準備ウィザード＋スライド自動生成
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            実施ログ＆効果測定ダッシュボード
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            生徒の副担任mirAI対話ログ確認
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            クラス進捗の俯瞰管理
+          </li>
+        </ul>
+      </div>
+      <div class="login-meta">
+        © 2026 副担任 mirAI NEXT｜教員ポータル
+      </div>
+    </div>
+
+    <div class="login-form-wrap">
+      <div class="login-form">
+        <div class="login-tabs">
+          <button class="login-tab active" onclick="showView('login-teacher')">教員ログイン</button>
+          <button class="login-tab" onclick="showView('login-student')">生徒ログイン</button>
+        </div>
+        <h2 class="login-title">おかえりなさい、先生</h2>
+        <p class="login-subtitle">授業の続きから、いつでもどうぞ。</p>
+
+        <form id="teacherLoginForm" onsubmit="handleLogin(event, 'teacher')">
+          <div class="form-group">
+            <label class="form-label" for="teacherEmail">メールアドレス</label>
+            <input type="email" id="teacherEmail" class="form-input" placeholder="teacher@demo.jp" autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="teacherPassword">パスワード</label>
+            <input type="password" id="teacherPassword" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+          <div id="teacherLoginError" class="form-error hidden"></div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top: 12px;">
+            ログイン
+          </button>
+        </form>
+
+        <div class="demo-accounts">
+          <h4>🔑 デモアカウント（クリックで入力）</h4>
+          <div class="demo-account-list">
+            <button type="button" class="demo-account-row" onclick="fillLogin('teacher','suzuki@demo.jp','demo123')">
+              <span>suzuki@demo.jp / demo123</span><span class="copy-hint">情報科・鈴木先生</span>
+            </button>
+            <button type="button" class="demo-account-row" onclick="fillLogin('teacher','tanaka@demo.jp','demo123')">
+              <span>tanaka@demo.jp / demo123</span><span class="copy-hint">数学科・田中先生</span>
+            </button>
+            <button type="button" class="demo-account-row" onclick="fillLogin('teacher','yamada@demo.jp','demo123')">
+              <span>yamada@demo.jp / demo123</span><span class="copy-hint">探究主任・山田先生</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     STUDENT LOGIN VIEW
+============================================================ -->
+<div id="view-login-student" class="view hidden">
+  <div class="login-page">
+    <div class="login-visual student-mode">
+      <div class="login-visual-image" style="background-image: url('assets/img/career.jpg');"></div>
+      <div>
+        <a href="#" class="logo" onclick="showView('landing'); return false;">
+          <span class="logo-mark">mAI</span>
+          <span>副担任 mirAI NEXT</span>
+        </a>
+      </div>
+      <div>
+        <h1 class="login-headline">
+          学びは、<br><span class="accent">未来へのチケット。</span>
+        </h1>
+        <ul class="login-features">
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            授業カリキュラムをいつでも確認
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            副担任mirAIにいつでも相談
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            キャリアシミュレーターで未来探索
+          </li>
+          <li>
+            <span class="check-icon">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+            </span>
+            あなたの振り返りログが志望理由になる
+          </li>
+        </ul>
+      </div>
+      <div class="login-meta">
+        © 2026 副担任 mirAI NEXT｜生徒ポータル
+      </div>
+    </div>
+
+    <div class="login-form-wrap">
+      <div class="login-form">
+        <div class="login-tabs">
+          <button class="login-tab" onclick="showView('login-teacher')">教員ログイン</button>
+          <button class="login-tab active student-active" onclick="showView('login-student')">生徒ログイン</button>
+        </div>
+        <h2 class="login-title" style="color: var(--teal);">こんにちは、未来の主役へ</h2>
+        <p class="login-subtitle">きょうも、いっしょに学びを進めよう。</p>
+
+        <form id="studentLoginForm" onsubmit="handleLogin(event, 'student')">
+          <div class="form-group">
+            <label class="form-label" for="studentEmail">メールアドレス</label>
+            <input type="email" id="studentEmail" class="form-input" placeholder="student@demo.jp" autocomplete="username" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="studentPassword">パスワード</label>
+            <input type="password" id="studentPassword" class="form-input" placeholder="••••••••" autocomplete="current-password" required>
+          </div>
+          <div id="studentLoginError" class="form-error hidden"></div>
+          <button type="submit" class="btn btn-teal btn-block btn-lg" style="margin-top: 12px;">
+            ログイン
+          </button>
+        </form>
+
+        <div class="demo-accounts" style="border-color: var(--teal); background: var(--teal-soft);">
+          <h4 style="color: var(--teal);">🔑 デモアカウント（クリックで入力）</h4>
+          <div class="demo-account-list">
+            <button type="button" class="demo-account-row" onclick="fillLogin('student','sakura@demo.jp','demo123')">
+              <span>sakura@demo.jp / demo123</span><span class="copy-hint">2年・佐藤さくら</span>
+            </button>
+            <button type="button" class="demo-account-row" onclick="fillLogin('student','kenta@demo.jp','demo123')">
+              <span>kenta@demo.jp / demo123</span><span class="copy-hint">2年・高橋健太</span>
+            </button>
+            <button type="button" class="demo-account-row" onclick="fillLogin('student','mio@demo.jp','demo123')">
+              <span>mio@demo.jp / demo123</span><span class="copy-hint">3年・伊藤美緒</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     TEACHER APP VIEW
+============================================================ -->
+<div id="view-teacher-app" class="view hidden">
+  <div class="app-shell">
+    <!-- Mobile bar -->
+    <div class="app-mobile-bar">
+      <button class="mobile-toggle" onclick="toggleSidebar()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="logo" style="font-size: 15px;">
+        <span class="logo-mark" style="width:28px; height:28px; font-size:12px;">mAI</span>
+        <span>mirAI NEXT</span>
+      </div>
+      <div style="width: 36px;"></div>
+    </div>
+
+    <!-- Sidebar -->
+    <aside class="app-sidebar" id="teacherSidebar">
+      <div class="sidebar-header">
+        <a href="#" class="logo" onclick="showView('landing'); return false;">
+          <span class="logo-mark">mAI</span>
+          <span>
+            副担任 mirAI NEXT
+            <div class="logo-sub">教員ポータル</div>
+          </span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">メインメニュー</div>
+        <button class="sidebar-link active" onclick="switchTeacherPage('home')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          ホーム
+        </button>
+        <button class="sidebar-link" onclick="switchTeacherPage('prepare')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/></svg>
+          授業準備
+        </button>
+        <button class="sidebar-link" onclick="switchTeacherPage('implement')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
+          授業実施
+        </button>
+        <button class="sidebar-link" onclick="switchTeacherPage('effects')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+          効果測定
+        </button>
+        <button class="sidebar-link" onclick="switchTeacherPage('progress')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          進捗管理
+        </button>
+
+        <div class="sidebar-section-label">生徒とつながる</div>
+        <button class="sidebar-link" onclick="switchTeacherPage('chatlogs')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          生徒のmirAI対話ログ
+          <span class="badge" id="chatLogBadge">3</span>
+        </button>
+        <button class="sidebar-link" onclick="switchTeacherPage('chat')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/></svg>
+          mirAIに相談（教員用）
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="user-avatar" id="teacherAvatar">先</div>
+          <div class="user-info">
+            <div class="user-name" id="teacherName">鈴木 先生</div>
+            <div class="user-role" id="teacherRole">情報科</div>
+          </div>
+          <button class="logout-btn" onclick="logout()" title="ログアウト">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="app-main">
+
+      <!-- Home page -->
+      <div class="teacher-page" data-page="home">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title" id="teacherWelcome">おかえりなさい、鈴木先生</div>
+            <div class="page-subtitle">今日もよろしくお願いします。学級の様子をかんたんに俯瞰できます。</div>
+          </div>
+          <button class="btn btn-primary" onclick="switchTeacherPage('prepare')">
+            ＋ 新しい授業を準備
+          </button>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card">
+            <div class="kpi-label">
+              <span class="kpi-label-icon">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </span>
+              準備済みの授業
+            </div>
+            <div class="kpi-value" id="kpiPrepared">5<span class="unit">件</span></div>
+            <div class="kpi-trend">うち2件は今週実施予定</div>
+          </div>
+          <div class="kpi-card tone-teal">
+            <div class="kpi-label">
+              <span class="kpi-label-icon" style="background:var(--teal-soft); color:var(--teal);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2"/><polyline points="9 11 12 14 22 4"/></svg>
+              </span>
+              実施完了
+            </div>
+            <div class="kpi-value" id="kpiImplemented">3<span class="unit">件</span></div>
+            <div class="kpi-trend">直近1ヶ月</div>
+          </div>
+          <div class="kpi-card tone-gold">
+            <div class="kpi-label">
+              <span class="kpi-label-icon" style="background:var(--gold-soft); color:#806010;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+              </span>
+              生徒の相談数
+            </div>
+            <div class="kpi-value" id="kpiChatCount">12<span class="unit">件</span></div>
+            <div class="kpi-trend">今週分・要確認3件</div>
+          </div>
+          <div class="kpi-card tone-purple">
+            <div class="kpi-label">
+              <span class="kpi-label-icon" style="background:var(--purple-soft); color:var(--purple);">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </span>
+              準備時間の見込
+            </div>
+            <div class="kpi-value">15<span class="unit">分/件</span></div>
+            <div class="kpi-trend">ウィザード入力からスライド化まで</div>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <span class="card-title-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </span>
+                授業実装の状況
+              </div>
+              <button class="btn btn-ghost btn-sm" onclick="switchTeacherPage('progress')">すべて見る →</button>
+            </div>
+            <div class="table-wrap">
+              <table class="data-table">
+                <thead>
+                  <tr><th>授業テーマ</th><th>対象</th><th>状態</th><th>更新</th></tr>
+                </thead>
+                <tbody id="teacherLessonTable">
+                  <!-- filled by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <span class="card-title-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </span>
+                クイックアクション
+              </div>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr; gap: 10px;">
+              <button class="btn btn-primary" onclick="switchTeacherPage('prepare')">📝 授業を新規作成</button>
+              <button class="btn btn-secondary" onclick="switchTeacherPage('implement')">✅ 実施ログを入力</button>
+              <button class="btn btn-secondary" onclick="switchTeacherPage('chatlogs')">💬 生徒の相談を確認</button>
+              <button class="btn btn-secondary" onclick="switchTeacherPage('chat')">🤖 mirAIに相談</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Prepare page -->
+      <div class="teacher-page hidden" data-page="prepare">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">📝 授業準備ウィザード</div>
+            <div class="page-subtitle">入力 → 生成 → レビュー → スライド化 → 出力。5ステップで実授業の素材が完成。</div>
+          </div>
+          <button class="btn btn-secondary" onclick="resetWizard()">最初からやり直す</button>
+        </div>
+
+        <div class="wizard-progress" id="wizardProgress">
+          <div class="wizard-step-pill active" data-step="1"><span class="wizard-step-num">1</span><span class="wizard-step-label">入力</span></div>
+          <div class="wizard-step-pill" data-step="2"><span class="wizard-step-num">2</span><span class="wizard-step-label">生成</span></div>
+          <div class="wizard-step-pill" data-step="3"><span class="wizard-step-num">3</span><span class="wizard-step-label">レビュー</span></div>
+          <div class="wizard-step-pill" data-step="4"><span class="wizard-step-num">4</span><span class="wizard-step-label">スライド化</span></div>
+          <div class="wizard-step-pill" data-step="5"><span class="wizard-step-num">5</span><span class="wizard-step-label">出力・保存</span></div>
+        </div>
+
+        <div class="card">
+          <!-- Step 1: Input -->
+          <div class="wizard-pane active" data-pane="1">
+            <h3 style="font-size:18px; font-weight:800; color:var(--primary); margin-bottom:6px;">学習設計を入力</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:18px;">テーマプリセットから選ぶか、自由に入力してください。</p>
+
+            <div class="preset-pills">
+              <button class="preset-pill" type="button" data-preset="info2">情報II × AI活用</button>
+              <button class="preset-pill" type="button" data-preset="inquiry">探究 × 地域連携</button>
+              <button class="preset-pill" type="button" data-preset="data">データ分析 × ビジネス</button>
+              <button class="preset-pill" type="button" data-preset="english">英語 × プレゼン</button>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">授業テーマ <span class="required">*</span></label>
+              <input type="text" id="inputTheme" class="form-input" placeholder="例：生成AIを使ったデータ分析と社会課題発見">
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">対象学年</label>
+                <select id="inputGrade" class="form-select">
+                  <option>高校1年</option><option selected>高校2年</option><option>高校3年</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label class="form-label">教科・領域</label>
+                <input type="text" id="inputSubject" class="form-input" value="情報II">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">時間設定</label>
+                <input type="text" id="inputDuration" class="form-input" value="2コマ（100分）">
+              </div>
+              <div class="form-group">
+                <label class="form-label">想定人数</label>
+                <input type="number" id="inputStudents" class="form-input" value="32">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">学習目標 <span class="required">*</span></label>
+              <textarea id="inputGoal" class="form-textarea" placeholder="例：生成AIの仕組みを理解し、公開データから社会課題を発見・分析する力を身につける。"></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">評価基準（任意）</label>
+              <textarea id="inputRubric" class="form-textarea" placeholder="A／B／C段階の到達指標を入力。空欄ならAIが自動生成します。"></textarea>
+            </div>
+
+            <div class="wizard-footer-bar">
+              <span style="font-size:12px; color:var(--gray-500);">Step 1 / 5</span>
+              <button class="btn btn-primary" onclick="wizardNext()">次へ →</button>
+            </div>
+          </div>
+
+          <!-- Step 2: Generate -->
+          <div class="wizard-pane" data-pane="2">
+            <h3 style="font-size:18px; font-weight:800; color:var(--primary); margin-bottom:6px;">AIが下書きを生成中…</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:18px;">授業案・教材・ルーブリックを並列で作成します。</p>
+
+            <div class="gen-progress">
+              <div class="gen-step-row" data-genstep="1"><div class="gen-step-icon">1</div>学習目標と単元構成を整理</div>
+              <div class="gen-step-row" data-genstep="2"><div class="gen-step-icon">2</div>授業案・展開を組み立てる</div>
+              <div class="gen-step-row" data-genstep="3"><div class="gen-step-icon">3</div>教材・ワークシートを設計</div>
+              <div class="gen-step-row" data-genstep="4"><div class="gen-step-icon">4</div>ルーブリック・評価観点を明確化</div>
+            </div>
+
+            <div class="gen-output" id="genOutput"><span class="cursor"></span></div>
+
+            <div class="wizard-footer-bar">
+              <button class="btn btn-secondary" onclick="wizardPrev()">← 戻る</button>
+              <button class="btn btn-primary" onclick="wizardNext()">レビューへ →</button>
+            </div>
+          </div>
+
+          <!-- Step 3: Review -->
+          <div class="wizard-pane" data-pane="3">
+            <h3 style="font-size:18px; font-weight:800; color:var(--primary); margin-bottom:6px;">内容を確認・編集する</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:18px;">3つの成果物それぞれを確認し、必要に応じて編集→承認してください。</p>
+
+            <div class="review-tabs">
+              <button class="review-tab active" data-tab="plan">📋 授業案</button>
+              <button class="review-tab" data-tab="material">📚 教材</button>
+              <button class="review-tab" data-tab="rubric">📊 ルーブリック</button>
+            </div>
+
+            <div class="review-content-box">
+              <textarea id="reviewContent" class="form-textarea"></textarea>
+            </div>
+
+            <div class="review-actions">
+              <span class="review-status" id="reviewStatus">
+                <span class="dot"></span>
+                <span>未承認</span>
+              </span>
+              <button class="btn btn-secondary btn-sm" onclick="regenerateCurrent()">🔄 再生成</button>
+              <button class="btn btn-primary btn-sm" onclick="approveCurrent()">✓ 承認する</button>
+              <div style="margin-left:auto; font-size:12px; color:var(--gray-500);">
+                承認済み: <strong id="approveCount">0</strong> / 3
+              </div>
+            </div>
+
+            <div class="wizard-footer-bar">
+              <button class="btn btn-secondary" onclick="wizardPrev()">← 戻る</button>
+              <button class="btn btn-primary" onclick="wizardNext()">スライド化へ →</button>
+            </div>
+          </div>
+
+          <!-- Step 4: Slide -->
+          <div class="wizard-pane" data-pane="4">
+            <h3 style="font-size:18px; font-weight:800; color:var(--primary); margin-bottom:6px;">教材をスライド化</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:18px;">作成した授業案・教材・ルーブリックから、授業当日に投影できるスライドを自動生成します。</p>
+
+            <div style="background: var(--primary-ultra-soft); border:1px solid var(--primary-3); border-radius: var(--radius-md); padding:20px; margin-bottom:18px;">
+              <div style="display:flex; gap:18px; align-items:center;">
+                <div style="width:60px; height:60px; background:linear-gradient(135deg, var(--primary-2), var(--primary-3)); color:#fff; border-radius:14px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <div style="flex:1;">
+                  <div style="font-size:15px; font-weight:800; color:var(--primary); margin-bottom:4px;">スライドを生成して投影できる状態に</div>
+                  <div style="font-size:12px; color:var(--gray-600);">表紙＋単元目標＋展開＋教材＋ルーブリック＋振り返り。全自動で構成します。</div>
+                </div>
+                <button class="btn btn-primary" onclick="generateSlides()">スライド化する</button>
+              </div>
+            </div>
+
+            <div id="slidePreview" class="hidden">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px;">
+                <strong style="color:var(--primary);">📊 生成されたスライド（<span id="slideCount">0</span>枚）</strong>
+                <div style="display:flex; gap:8px;">
+                  <button class="btn btn-teal btn-sm" onclick="openSlideViewer()">▶ プレゼンを再生</button>
+                  <button class="btn btn-secondary btn-sm" onclick="downloadSlidesPDF()">📥 PDFダウンロード</button>
+                </div>
+              </div>
+              <div id="slideThumbList" style="display:grid; grid-template-columns:repeat(auto-fill, minmax(180px, 1fr)); gap:12px;"></div>
+            </div>
+
+            <div class="wizard-footer-bar">
+              <button class="btn btn-secondary" onclick="wizardPrev()">← 戻る</button>
+              <button class="btn btn-primary" onclick="wizardNext()">出力・保存へ →</button>
+            </div>
+          </div>
+
+          <!-- Step 5: Save -->
+          <div class="wizard-pane" data-pane="5">
+            <h3 style="font-size:18px; font-weight:800; color:var(--primary); margin-bottom:6px;">授業として保存</h3>
+            <p style="font-size:13px; color:var(--gray-600); margin-bottom:18px;">この授業をマイクラスに登録します。実施日を予定すると「授業実施」画面で記録できるようになります。</p>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">実施予定日</label>
+                <input type="date" id="planDate" class="form-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label">対象クラス</label>
+                <select id="planClass" class="form-select">
+                  <option>2年A組</option><option>2年B組</option><option>2年C組</option><option>3年A組</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">メモ（任意）</label>
+              <textarea id="planNote" class="form-textarea" placeholder="この授業で重視したい点や、補足事項があれば。"></textarea>
+            </div>
+
+            <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:20px;">
+              <button class="btn btn-primary" onclick="saveLesson()">💾 マイクラスに保存</button>
+              <button class="btn btn-secondary" onclick="downloadSlidesPDF()">📥 スライドPDF</button>
+              <button class="btn btn-secondary" onclick="downloadLessonText()">📄 授業案テキスト</button>
+            </div>
+
+            <div class="wizard-footer-bar">
+              <button class="btn btn-secondary" onclick="wizardPrev()">← 戻る</button>
+              <button class="btn btn-primary" onclick="completeWizard()">✓ 完了して一覧へ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Implement page -->
+      <div class="teacher-page hidden" data-page="implement">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">✅ 授業実施ログ</div>
+            <div class="page-subtitle">授業当日の進行を記録し、終了後に振り返りを入力。次の改善に活かせます。</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">
+              <span class="card-title-icon">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+              </span>
+              実施する授業を選ぶ
+            </div>
+          </div>
+          <select id="implementLessonSelect" class="form-select" onchange="loadImplementLesson()">
+            <option value="">— 授業を選択 —</option>
+          </select>
+        </div>
+
+        <div id="implementContent" class="hidden">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <span class="card-title-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                </span>
+                授業進行チェックリスト
+              </div>
+            </div>
+            <div class="checklist" id="implementChecklist">
+              <div class="check-item"><input type="checkbox" id="chk1"><label for="chk1">導入：本時のゴールを生徒と共有した</label></div>
+              <div class="check-item"><input type="checkbox" id="chk2"><label for="chk2">展開①：インプット・基本概念の説明を行った</label></div>
+              <div class="check-item"><input type="checkbox" id="chk3"><label for="chk3">展開②：個人ワークで気づきを言語化させた</label></div>
+              <div class="check-item"><input type="checkbox" id="chk4"><label for="chk4">展開③：グループ協働でテーマを深掘りした</label></div>
+              <div class="check-item"><input type="checkbox" id="chk5"><label for="chk5">中間共有：各班の仮説を全体に共有した</label></div>
+              <div class="check-item"><input type="checkbox" id="chk6"><label for="chk6">まとめ：論点整理＋次回への問いを提示した</label></div>
+              <div class="check-item"><input type="checkbox" id="chk7"><label for="chk7">振り返りシートの記入を確認した</label></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">
+                <span class="card-title-icon">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+              </span>
+              実施結果の入力
+            </div>
+          </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">実施日</label>
+                <input type="date" id="logDate" class="form-input">
+              </div>
+              <div class="form-group">
+                <label class="form-label">対象クラス</label>
+                <input type="text" id="logClass" class="form-input" value="2年A組">
+              </div>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label class="form-label">出席人数</label>
+                <input type="number" id="logAttendance" class="form-input" value="30">
+              </div>
+              <div class="form-group">
+                <label class="form-label">所要時間（分）</label>
+                <input type="number" id="logDuration" class="form-input" value="100">
+              </div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">生徒の参加率（教員の体感・%）</label>
+              <input type="range" id="logParticipation" min="0" max="100" value="78" style="width:100%;">
+              <div style="text-align:right; font-size:13px; color:var(--gray-600);">体感：<strong id="logParticipationValue">78</strong>%</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">ルーブリックA到達割合（%）</label>
+              <input type="range" id="logAchievement" min="0" max="100" value="62" style="width:100%;">
+              <div style="text-align:right; font-size:13px; color:var(--gray-600);">A到達：<strong id="logAchievementValue">62</strong>%</div>
+            </div>
+            <div class="form-group">
+              <label class="form-label">教員の所感・気づき</label>
+              <textarea id="logNote" class="form-textarea" placeholder="生徒の様子、うまくいった点、次回改善したい点など"></textarea>
+            </div>
+            <div style="display:flex; gap:10px;">
+              <button class="btn btn-primary" onclick="saveImplementLog()">💾 実施ログを保存</button>
+              <button class="btn btn-secondary" onclick="switchTeacherPage('effects')">📊 効果測定で結果を見る →</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Effects page -->
+      <div class="teacher-page hidden" data-page="effects">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">📊 効果測定ダッシュボード</div>
+            <div class="page-subtitle">実施した授業の結果から、次回の改善ポイントを可視化します。</div>
+          </div>
+          <select id="effectsLessonSelect" class="form-select" onchange="renderEffects()" style="width: auto;">
+            <option value="">— 授業を選択 —</option>
+          </select>
+        </div>
+
+        <div id="effectsEmpty" class="card">
+          <div class="empty-state">
+            <div class="empty-icon">📊</div>
+            <h4>まだ実施ログが入力されていません</h4>
+            <p>「授業実施」ページからログを入力すると、ここに結果が可視化されます。</p>
+          </div>
+        </div>
+
+        <div id="effectsContent" class="hidden">
+          <div class="kpi-grid">
+            <div class="kpi-card"><div class="kpi-label">出席率</div><div class="kpi-value" id="effAttendance">—</div></div>
+            <div class="kpi-card tone-teal"><div class="kpi-label">参加体感率</div><div class="kpi-value" id="effParticipation">—</div></div>
+            <div class="kpi-card tone-gold"><div class="kpi-label">A到達割合</div><div class="kpi-value" id="effAchievement">—</div></div>
+            <div class="kpi-card tone-purple"><div class="kpi-label">実施回数</div><div class="kpi-value" id="effCount">—</div></div>
+          </div>
+
+          <div class="chart-grid">
+            <div class="chart-box">
+              <div class="chart-title">📈 学習ログの推移</div>
+              <div style="height:280px;"><canvas id="chartTrend"></canvas></div>
+            </div>
+            <div class="chart-box">
+              <div class="chart-title">⏱️ 活動時間の内訳</div>
+              <div style="height:280px;"><canvas id="chartBreakdown"></canvas></div>
+            </div>
+          </div>
+
+          <div class="improvement-box">
+            <h4>💡 次回への改善提案</h4>
+            <ul id="improvementList"></ul>
+          </div>
+
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">📝 教員の所感</div>
+            </div>
+            <div id="effNote" style="white-space:pre-wrap; font-size:13px; color:var(--gray-700);">—</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Progress page -->
+      <div class="teacher-page hidden" data-page="progress">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">📋 進捗管理</div>
+            <div class="page-subtitle">マイクラスに登録された授業を一覧で管理します。</div>
+          </div>
+          <button class="btn btn-primary" onclick="switchTeacherPage('prepare')">＋ 新規授業</button>
+        </div>
+
+        <div class="card">
+          <div class="table-wrap">
+            <table class="data-table">
+              <thead>
+                <tr><th>テーマ</th><th>対象クラス</th><th>予定日</th><th>状態</th><th>承認</th><th>アクション</th></tr>
+              </thead>
+              <tbody id="progressTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat logs page -->
+      <div class="teacher-page hidden" data-page="chatlogs">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">💬 生徒の副担任mirAI対話ログ</div>
+            <div class="page-subtitle">生徒が相談している内容を把握し、必要に応じて声かけのきっかけに。</div>
+          </div>
+          <select id="chatLogFilter" class="form-select" style="width:auto;" onchange="renderChatLogs()">
+            <option value="all">すべて</option>
+            <option value="career">進路相談</option>
+            <option value="study">学習相談</option>
+            <option value="worry">悩みごと</option>
+          </select>
+        </div>
+
+        <div id="chatLogsList"></div>
+      </div>
+
+      <!-- Teacher chat -->
+      <div class="teacher-page hidden" data-page="chat">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">🤖 副担任 mirAIに相談（教員モード）</div>
+            <div class="page-subtitle">授業設計・評価・生徒対応など、何でも気軽にご相談ください。</div>
+          </div>
+        </div>
+
+        <div class="chat-frame">
+          <div class="chat-frame-header">
+            <div class="chat-avatar">🤖</div>
+            <div class="chat-title-block">
+              <div class="chat-frame-title">副担任 mirAI（教員モード）</div>
+              <div class="chat-frame-sub"><span class="online-dot"></span> オンライン</div>
+            </div>
+            <label class="chat-mode-toggle">
+              <span id="teacherChatMode">LOCAL</span>
+              <input type="checkbox" id="teacherApiToggle" onchange="toggleApiMode('teacher')">
+              <span style="width:32px; height:18px; background:rgba(255,255,255,.25); border-radius:999px; position:relative; cursor:pointer;">
+                <span id="teacherToggleHandle" style="position:absolute; left:2px; top:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:.2s;"></span>
+              </span>
+            </label>
+          </div>
+          <div class="chat-messages" id="teacherChatMessages">
+            <div class="chat-msg bot">こんにちは、先生！授業設計・評価・生徒対応など、なんでもご相談ください。サジェストもご活用ください👇</div>
+          </div>
+          <div class="chat-suggestions">
+            <button class="chat-suggestion" data-prompt="情報IIで生成AIを使った授業案を作りたい">情報II × AI活用</button>
+            <button class="chat-suggestion" data-prompt="ルーブリックの作り方を教えて">ルーブリック設計</button>
+            <button class="chat-suggestion" data-prompt="探究で地域連携テーマを考えたい">探究 × 地域連携</button>
+            <button class="chat-suggestion" data-prompt="生徒の振り返りを志望理由に活かしたい">志望理由支援</button>
+            <button class="chat-suggestion" data-prompt="校内向けの成果報告のコツは？">成果報告</button>
+          </div>
+          <div class="chat-input-bar">
+            <input type="text" id="teacherChatInput" class="chat-input" placeholder="メッセージを入力…">
+            <button class="chat-send" onclick="sendChat('teacher')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <details style="background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius-md); padding:16px;">
+            <summary style="font-size:13px; font-weight:700; cursor:pointer; color:var(--primary);">⚙️ OpenAI API設定（任意）</summary>
+            <div style="margin-top:12px;">
+              <label class="form-label" style="font-size:12px;">APIキー（ブラウザ内のみ保存、サーバー送信なし）</label>
+              <input type="password" id="teacherApiKey" class="form-input" placeholder="sk-..." style="font-family:monospace; font-size:12px;">
+              <p style="font-size:11px; color:var(--gray-500); margin-top:6px;">キーを設定して上のトグルをONにすると、gpt-4o-miniで応答します。</p>
+            </div>
+          </details>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     STUDENT APP VIEW
+============================================================ -->
+<div id="view-student-app" class="view hidden student-app">
+  <div class="app-shell">
+    <div class="app-mobile-bar">
+      <button class="mobile-toggle" onclick="toggleSidebar()">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <div class="logo" style="font-size:15px; color:#fff;">
+        <span class="logo-mark" style="width:28px; height:28px; font-size:12px; background: linear-gradient(135deg, var(--gold), #b88b13);">mAI</span>
+        <span>mirAI NEXT</span>
+      </div>
+      <div style="width: 36px;"></div>
+    </div>
+
+    <aside class="app-sidebar student-sidebar" id="studentSidebar">
+      <div class="sidebar-header">
+        <a href="#" class="logo" onclick="showView('landing'); return false;">
+          <span class="logo-mark" style="background: linear-gradient(135deg, var(--gold), #b88b13);">mAI</span>
+          <span>
+            副担任 mirAI NEXT
+            <div class="logo-sub">生徒ポータル</div>
+          </span>
+        </a>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="sidebar-section-label">学びのメニュー</div>
+        <button class="sidebar-link active" onclick="switchStudentPage('home')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          ホーム
+        </button>
+        <button class="sidebar-link" onclick="switchStudentPage('curriculum')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          カリキュラム
+        </button>
+        <button class="sidebar-link" onclick="switchStudentPage('chat')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+          副担任mirAIと話す
+        </button>
+        <button class="sidebar-link" onclick="switchStudentPage('career')">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88"/></svg>
+          キャリアシミュレーター
+        </button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="user-card">
+          <div class="user-avatar" id="studentAvatar">生</div>
+          <div class="user-info">
+            <div class="user-name" id="studentName">佐藤 さくら</div>
+            <div class="user-role" id="studentRole">2年A組</div>
+          </div>
+          <button class="logout-btn" onclick="logout()" title="ログアウト">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" y1="12" x2="9" y2="12"/></svg>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="app-main">
+
+      <!-- Student Home -->
+      <div class="student-page" data-page="home">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title" id="studentWelcome">こんにちは、さくらさん 🌸</div>
+            <div class="page-subtitle">きょうも、いっしょに学びを進めていきましょう。</div>
+          </div>
+        </div>
+
+        <div style="position:relative; border-radius:24px; overflow:hidden; aspect-ratio:16/6; background-size:cover; background-position:center; background-image:url('assets/img/students_active.jpg'); margin-bottom:24px; display:flex; align-items:center; padding:32px 40px;">
+          <div style="position:absolute; inset:0; background: linear-gradient(90deg, rgba(0,110,100,.92) 0%, rgba(0,169,157,.5) 100%);"></div>
+          <div style="position:relative; color:#fff; max-width:520px;">
+            <h2 style="font-size:clamp(20px, 2.6vw, 30px); font-weight:900; margin-bottom:10px;">毎日の学びを、自分の言葉に。</h2>
+            <p style="font-size:14px; opacity:.95; line-height:1.7;">カリキュラムを進めて、振り返りを残して、将来をのぞいてみよう。副担任mirAIがいつでも横にいます。</p>
+          </div>
+        </div>
+
+        <div class="kpi-grid">
+          <div class="kpi-card tone-teal">
+            <div class="kpi-label">受講中の単元</div>
+            <div class="kpi-value">3<span class="unit">単元</span></div>
+            <div class="kpi-trend">情報II・探究・データ活用</div>
+          </div>
+          <div class="kpi-card tone-gold">
+            <div class="kpi-label">今週の課題</div>
+            <div class="kpi-value">2<span class="unit">件</span></div>
+            <div class="kpi-trend">提出締切：金曜まで</div>
+          </div>
+          <div class="kpi-card tone-purple">
+            <div class="kpi-label">mirAIとの会話</div>
+            <div class="kpi-value" id="studentChatCount">0<span class="unit">回</span></div>
+            <div class="kpi-trend">気軽に話しかけてみよう</div>
+          </div>
+          <div class="kpi-card">
+            <div class="kpi-label">キャリア候補</div>
+            <div class="kpi-value" id="careerResultCount">—</div>
+            <div class="kpi-trend">シミュレーターで発見</div>
+          </div>
+        </div>
+
+        <div class="card-row">
+          <div class="card">
+            <div class="card-header">
+              <div class="card-title">📚 進行中のカリキュラム</div>
+              <button class="btn btn-ghost btn-sm" onclick="switchStudentPage('curriculum')">すべて見る →</button>
+            </div>
+            <div id="studentLessonPreview"></div>
+          </div>
+          <div class="card" style="background: linear-gradient(135deg, var(--teal-soft), #fff);">
+            <div class="card-header">
+              <div class="card-title">✨ きょうのおすすめ</div>
+            </div>
+            <div style="display:grid; grid-template-columns:1fr; gap:10px;">
+              <button class="btn btn-teal" onclick="switchStudentPage('chat')">💬 mirAIに相談してみる</button>
+              <button class="btn btn-secondary" onclick="switchStudentPage('career')">🎯 キャリアを探検する</button>
+              <button class="btn btn-secondary" onclick="switchStudentPage('curriculum')">📖 きょうの単元を見る</button>
+            </div>
+            <p style="margin-top:14px; font-size:12px; color:var(--gray-600); line-height:1.7;">
+              迷ったり、気になることがあったら、mirAIに話しかけてみよう。あなたの言葉を、次の学びにつなげます。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Curriculum -->
+      <div class="student-page hidden" data-page="curriculum">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">📚 カリキュラム</div>
+            <div class="page-subtitle">今学期の単元・課題・教材を一覧で確認できます。</div>
+          </div>
+        </div>
+
+        <div class="curriculum-grid" id="curriculumGrid"></div>
+      </div>
+
+      <!-- Student Chat -->
+      <div class="student-page hidden" data-page="chat">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">💬 副担任 mirAIと話す</div>
+            <div class="page-subtitle">勉強・進路・気になっていること、なんでも気軽に話してみよう。</div>
+          </div>
+        </div>
+
+        <div class="chat-frame">
+          <div class="chat-frame-header">
+            <div class="chat-avatar">🤖</div>
+            <div class="chat-title-block">
+              <div class="chat-frame-title">副担任 mirAI</div>
+              <div class="chat-frame-sub"><span class="online-dot"></span> いつでも話しかけてね</div>
+            </div>
+            <label class="chat-mode-toggle">
+              <span id="studentChatMode">LOCAL</span>
+              <input type="checkbox" id="studentApiToggle" onchange="toggleApiMode('student')">
+              <span style="width:32px; height:18px; background:rgba(255,255,255,.25); border-radius:999px; position:relative; cursor:pointer;">
+                <span id="studentToggleHandle" style="position:absolute; left:2px; top:2px; width:14px; height:14px; background:#fff; border-radius:50%; transition:.2s;"></span>
+              </span>
+            </label>
+          </div>
+          <div class="chat-messages" id="studentChatMessages">
+            <div class="chat-msg bot">こんにちは！副担任 mirAI です🤖<br>勉強、進路、毎日のこと、なんでも話してくださいね。話したことは、あなたが許可した時だけ先生に共有されます。</div>
+          </div>
+          <div class="chat-suggestions">
+            <button class="chat-suggestion" data-prompt="数学の勉強の仕方が分からない">数学の勉強法</button>
+            <button class="chat-suggestion" data-prompt="進路について悩んでいる">進路の悩み</button>
+            <button class="chat-suggestion" data-prompt="探究のテーマが決まらない">探究テーマ</button>
+            <button class="chat-suggestion" data-prompt="志望理由書の書き方を教えて">志望理由書</button>
+            <button class="chat-suggestion" data-prompt="部活と勉強の両立が辛い">悩みごと</button>
+          </div>
+          <div class="chat-input-bar">
+            <input type="text" id="studentChatInput" class="chat-input" placeholder="メッセージを入力…">
+            <button class="chat-send" onclick="sendChat('student')">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;">
+          <details style="background:#fff; border:1px solid var(--gray-200); border-radius:var(--radius-md); padding:16px;">
+            <summary style="font-size:13px; font-weight:700; cursor:pointer; color:var(--teal);">⚙️ APIキー設定（任意）</summary>
+            <div style="margin-top:12px;">
+              <input type="password" id="studentApiKey" class="form-input" placeholder="sk-..." style="font-family:monospace; font-size:12px;">
+            </div>
+          </details>
+        </div>
+      </div>
+
+      <!-- Career -->
+      <div class="student-page hidden" data-page="career">
+        <div class="page-header">
+          <div class="page-title-block">
+            <div class="page-title">🎯 キャリアシミュレーター</div>
+            <div class="page-subtitle">あなたの興味・好きなことから、未来の選択肢を探してみよう。</div>
+          </div>
+        </div>
+
+        <div class="career-hero" style="background-image: url('assets/img/career.jpg');">
+          <div class="career-hero-content">
+            <h2>未来の自分は、いま選んでいる</h2>
+            <p>気になることをタップしていくだけで、相性の良い進路と、そこへ向かう学びの地図が見えてきます。</p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="card-title">📍 ステップ1：興味のある分野を選ぼう（複数選択OK）</div>
+          </div>
+          <div class="interest-grid" id="interestGrid"></div>
+          <div style="display:flex; gap:10px; align-items:center;">
+            <button class="btn btn-teal" onclick="runCareerMatch()">✨ マッチング実行</button>
+            <button class="btn btn-secondary btn-sm" onclick="resetCareerInterests()">クリア</button>
+            <span id="interestCounter" style="margin-left:auto; font-size:12px; color:var(--gray-500);">0個選択中</span>
+          </div>
+        </div>
+
+        <div class="career-result">
+          <div id="careerResultArea">
+            <div class="career-result-empty">
+              <div class="icon">🌱</div>
+              <p>まだ何も選択されていません。<br>気になる分野を選んで、マッチング実行を押してみよう。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SLIDE VIEWER OVERLAY
+============================================================ -->
+<div id="slideOverlay" class="slide-overlay">
+  <button class="slide-close-btn" onclick="closeSlideViewer()">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <button class="btn btn-secondary btn-sm slide-download-btn" onclick="downloadSlidesPDF()">
+    📥 PDF
+  </button>
+  <div class="slide-stage">
+    <div class="slide-canvas" id="slideCanvas"></div>
+  </div>
+  <div class="slide-controls">
+    <button class="slide-ctrl-btn" onclick="slidePrev()" id="slidePrevBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="15 18 9 12 15 6"/></svg>
+    </button>
+    <div class="slide-position"><span id="slidePos">1</span>/<span id="slideTotal">1</span></div>
+    <button class="slide-ctrl-btn" onclick="slideNext()" id="slideNextBtn">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
+    </button>
+  </div>
+</div>
+
+
+<!-- Toast container -->
+<div id="toastContainer" class="toast-container"></div>
+
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
